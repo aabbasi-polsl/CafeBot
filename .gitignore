@@ -1,0 +1,23 @@
+# Local secrets and environment files
+.env
+.env.*
+!.env.example
+
+# Generated dependencies and Python environments
+node_modules/
+__pycache__/
+.venv/
+venv/
+
+# macOS files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100/
+.Trashes/
+
+# Windows files
+Thumbs.db
+ehthumbs.db
+desktop.ini

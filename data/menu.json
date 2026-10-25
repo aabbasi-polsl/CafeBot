@@ -1,0 +1,197 @@
+{
+  "currency": "PLN",
+  "notice": "Illustrative sample menu only. Verify prices, ingredients, allergens, dietary claims, and availability with the cafe before using this data with customers.",
+  "items": [
+    {
+      "id": "coffee-espresso",
+      "category": "Coffee",
+      "name": "Espresso",
+      "description": "A single shot of freshly brewed espresso.",
+      "price_pln": 9.00,
+      "sizes": [
+        { "name": "Single", "price_adjustment_pln": 0.00 },
+        { "name": "Double", "price_adjustment_pln": 4.00 }
+      ],
+      "options": [],
+      "allergens": [],
+      "dietary": ["vegan", "vegetarian", "dairy-free", "gluten-free"],
+      "available": true
+    },
+    {
+      "id": "coffee-americano",
+      "category": "Coffee",
+      "name": "Americano",
+      "description": "Espresso topped with hot water.",
+      "price_pln": 12.00,
+      "sizes": [
+        { "name": "Regular", "price_adjustment_pln": 0.00 },
+        { "name": "Large", "price_adjustment_pln": 3.00 }
+      ],
+      "options": [],
+      "allergens": [],
+      "dietary": ["vegan", "vegetarian", "dairy-free", "gluten-free"],
+      "available": true
+    },
+    {
+      "id": "coffee-cappuccino",
+      "category": "Coffee",
+      "name": "Cappuccino",
+      "description": "Espresso with steamed milk and a layer of milk foam.",
+      "price_pln": 15.00,
+      "sizes": [
+        { "name": "Regular", "price_adjustment_pln": 0.00 },
+        { "name": "Large", "price_adjustment_pln": 3.00 }
+      ],
+      "options": [
+        { "name": "Extra espresso shot", "additional_price_pln": 4.00 }
+      ],
+      "allergens": ["milk"],
+      "dietary": ["vegetarian", "gluten-free"],
+      "available": true
+    },
+    {
+      "id": "coffee-latte",
+      "category": "Coffee",
+      "name": "Latte",
+      "description": "Espresso with steamed milk.",
+      "price_pln": 16.00,
+      "sizes": [
+        { "name": "Regular", "price_adjustment_pln": 0.00 },
+        { "name": "Large", "price_adjustment_pln": 3.00 }
+      ],
+      "options": [
+        { "name": "Vanilla syrup", "additional_price_pln": 2.00 },
+        { "name": "Extra espresso shot", "additional_price_pln": 4.00 }
+      ],
+      "allergens": ["milk"],
+      "dietary": ["vegetarian", "gluten-free"],
+      "available": true
+    },
+    {
+      "id": "tea-earl-grey",
+      "category": "Tea",
+      "name": "Earl Grey Tea",
+      "description": "Black tea scented with bergamot, served hot.",
+      "price_pln": 12.00,
+      "sizes": [
+        { "name": "Regular", "price_adjustment_pln": 0.00 }
+      ],
+      "options": [
+        { "name": "Lemon slice", "additional_price_pln": 0.00 }
+      ],
+      "allergens": [],
+      "dietary": ["vegan", "vegetarian", "dairy-free", "gluten-free"],
+      "available": true
+    },
+    {
+      "id": "tea-chai-latte",
+      "category": "Tea",
+      "name": "Chai Latte",
+      "description": "Spiced black tea prepared with steamed milk.",
+      "price_pln": 17.00,
+      "sizes": [
+        { "name": "Regular", "price_adjustment_pln": 0.00 },
+        { "name": "Large", "price_adjustment_pln": 3.00 }
+      ],
+      "options": [],
+      "allergens": ["milk"],
+      "dietary": ["vegetarian", "gluten-free"],
+      "available": true
+    },
+    {
+      "id": "cold-iced-latte",
+      "category": "Cold Drinks",
+      "name": "Iced Latte",
+      "description": "Espresso and cold milk served over ice.",
+      "price_pln": 17.00,
+      "sizes": [
+        { "name": "Regular", "price_adjustment_pln": 0.00 },
+        { "name": "Large", "price_adjustment_pln": 3.00 }
+      ],
+      "options": [
+        { "name": "Vanilla syrup", "additional_price_pln": 2.00 },
+        { "name": "Extra espresso shot", "additional_price_pln": 4.00 }
+      ],
+      "allergens": ["milk"],
+      "dietary": ["vegetarian", "gluten-free"],
+      "available": true
+    },
+    {
+      "id": "cold-lemonade",
+      "category": "Cold Drinks",
+      "name": "House Lemonade",
+      "description": "Chilled lemonade made with lemon, water, and sugar.",
+      "price_pln": 14.00,
+      "sizes": [
+        { "name": "Regular", "price_adjustment_pln": 0.00 },
+        { "name": "Large", "price_adjustment_pln": 4.00 }
+      ],
+      "options": [],
+      "allergens": [],
+      "dietary": ["vegan", "vegetarian", "dairy-free", "gluten-free"],
+      "available": true
+    },
+    {
+      "id": "bakery-croissant",
+      "category": "Bakery",
+      "name": "Butter Croissant",
+      "description": "Flaky pastry made with wheat flour, butter, and egg.",
+      "price_pln": 14.00,
+      "sizes": [
+        { "name": "One size", "price_adjustment_pln": 0.00 }
+      ],
+      "options": [
+        { "name": "Warm it", "additional_price_pln": 0.00 }
+      ],
+      "allergens": ["wheat (gluten)", "milk", "egg"],
+      "dietary": ["vegetarian"],
+      "available": true
+    },
+    {
+      "id": "bakery-blueberry-muffin",
+      "category": "Bakery",
+      "name": "Blueberry Muffin",
+      "description": "Soft muffin with blueberries, made with wheat flour, egg, and milk.",
+      "price_pln": 16.00,
+      "sizes": [
+        { "name": "One size", "price_adjustment_pln": 0.00 }
+      ],
+      "options": [],
+      "allergens": ["wheat (gluten)", "egg", "milk"],
+      "dietary": ["vegetarian"],
+      "available": true
+    },
+    {
+      "id": "breakfast-avocado-toast",
+      "category": "Breakfast",
+      "name": "Avocado Toast",
+      "description": "Smashed avocado with lemon on toasted sourdough bread.",
+      "price_pln": 27.00,
+      "sizes": [
+        { "name": "One serving", "price_adjustment_pln": 0.00 }
+      ],
+      "options": [
+        { "name": "Chili flakes", "additional_price_pln": 0.00 }
+      ],
+      "allergens": ["wheat (gluten)"],
+      "dietary": ["vegan", "vegetarian", "dairy-free"],
+      "available": true
+    },
+    {
+      "id": "lunch-grilled-cheese",
+      "category": "Lunch",
+      "name": "Grilled Cheese Sandwich",
+      "description": "Toasted sourdough with cheddar cheese.",
+      "price_pln": 29.00,
+      "sizes": [
+        { "name": "One serving", "price_adjustment_pln": 0.00 }
+      ],
+      "options": [
+        { "name": "Tomato", "additional_price_pln": 3.00 }
+      ],
+      "allergens": ["wheat (gluten)", "milk"],
+      "dietary": ["vegetarian"],
+      "available": false
+    }
+  ]
+}
