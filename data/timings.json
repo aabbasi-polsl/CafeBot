@@ -1,0 +1,14 @@
+{
+  "hours": [
+    {
+      "days": "Monday–Friday",
+      "open": "09:00",
+      "close": "12:00"
+    },
+    {
+      "days": "Saturday–Sunday",
+      "open": "09:00",
+      "close": "14:00"
+    }
+  ]
+}

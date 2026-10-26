@@ -2,6 +2,8 @@
 .env
 .env.*
 !.env.example
+/env/*
+!/env/.env.example
 
 # Generated dependencies and Python environments
 node_modules/

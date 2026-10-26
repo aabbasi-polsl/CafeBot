@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f0e7">
+  <title>Little Cup Café | CafeBot</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Little Cup Café home"><span class="brand-mark">☕</span> little cup</a>
+    <nav aria-label="Main navigation">
+      <a href="#menu">Menu</a>
+      <a href="#about">Our café</a>
+      <a class="nav-cta" href="#cafebot">Ask CafeBot <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> YOUR NEIGHBORHOOD COFFEE SPOT</p>
+        <h1>A little pause.<br><span>A lot of good.</span></h1>
+        <p class="intro">Fresh coffee, something lovely from the oven, and a cozy corner waiting for you.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#menu">Explore the menu <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#cafebot">Chat with CafeBot <span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="hours-note"><span aria-hidden="true">✳</span> Good coffee, good company, every day.</p>
+      </div>
+      <div class="hero-art" aria-label="Illustration of coffee and a pastry">
+        <div class="sun"></div>
+        <div class="art-caption">SLOW MORNINGS<br>START HERE</div>
+        <div class="cup-shadow"></div>
+        <div class="coffee-cup"><div class="coffee-top"><span>✳</span></div><div class="cup-body"></div><div class="cup-handle"></div></div>
+        <div class="croissant"><span>〰</span></div>
+        <div class="art-leaf leaf-one">✦</div>
+        <div class="art-leaf leaf-two">✦</div>
+        <div class="art-stamp">BREWED<br>WITH<br>CARE</div>
+      </div>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="section-heading">
+        <div><p class="eyebrow">FRESH FROM OUR MENU</p><h2>Made for your moment.</h2></div>
+        <p>Find a favorite for every kind of café break.</p>
+      </div>
+      <div class="menu-filters" id="menu-filters" aria-label="Filter menu by category"></div>
+      <div class="menu-grid" id="menu-items" aria-live="polite" aria-busy="true">
+        <p class="menu-state">Loading the menu…</p>
+      </div>
+      <p class="menu-note" id="menu-note">Prices are shown in PLN. Ask CafeBot about menu details.</p>
+    </section>
+
+    <section class="bot-section" id="cafebot">
+      <div class="bot-copy" id="about">
+        <p class="eyebrow">A FRIENDLY LITTLE HELPER</p>
+        <h2>Meet CafeBot.</h2>
+        <p>Wondering what’s on the menu or when we’re open? Ask CafeBot for help.</p>
+        <span class="bot-status"><span class="status-dot"></span> Chat ready</span>
+      </div>
+      <div class="chat-card" aria-label="CafeBot chat">
+        <div class="chat-header"><div class="bot-avatar">☕</div><div><strong>CafeBot</strong><span>Your café sidekick</span></div><span class="online-dot" aria-label="Chat ready"></span></div>
+        <div class="chat-body" id="chat-messages" role="log" aria-label="Conversation" aria-live="polite" aria-relevant="additions">
+          <div class="message bot-message">Hi there! How can I help you today?</div>
+        </div>
+        <form class="chat-input" id="chat-form">
+          <textarea id="chat-message" name="message" rows="1" maxlength="1000" placeholder="Ask CafeBot…" aria-label="Message CafeBot"></textarea>
+          <button id="chat-send" type="submit" aria-label="Send message" title="Send message">↑</button>
+        </form>
+        <p class="chat-footnote" id="chat-status" role="status" aria-live="polite">Ask about cafe information. Orders cannot be placed in this chat.</p>
+      </div>
+    </section>
+  </main>
+
+  <section class="hours-section" id="opening-hours" aria-labelledby="hours-title">
+    <div class="hours-card">
+      <div class="hours-heading">
+        <span class="hours-icon" aria-hidden="true">◷</span>
+        <div><p class="eyebrow">COME BY WHENEVER</p><h2 id="hours-title">Opening Hours</h2></div>
+      </div>
+      <div class="hours-list" id="hours-list" aria-live="polite" aria-busy="true">
+        <p class="hours-state">Loading opening hours…</p>
+      </div>
+    </div>
+  </section>
+
+  <footer><a class="brand" href="#home"><span class="brand-mark">☕</span> little cup</a><span>Made for a cozier coffee break.</span><a href="#home">Back to top ↑</a></footer>
+  <script src="/menu.js" defer></script>
+  <script src="/app.js" defer></script>
+  <script src="/timings.js" defer></script>
+</body>
+</html>
