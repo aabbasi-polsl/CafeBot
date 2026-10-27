@@ -5,7 +5,7 @@ const chatMessages = document.querySelector('#chat-messages');
 const chatStatus = document.querySelector('#chat-status');
 
 const greeting = 'Hi there! How can I help you today?';
-const defaultStatus = 'Ask about cafe information. Orders cannot be placed in this chat.';
+const defaultStatus = 'Orders are saved locally only after final confirmation. No payment is processed.';
 const conversationHistory = [{ role: 'assistant', content: greeting }];
 let requestInProgress = false;
 
@@ -56,12 +56,18 @@ chatForm.addEventListener('submit', async (event) => {
   try {
     const response = await fetch('/api/chat', {
       method: 'POST',
+      credentials: 'same-origin',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ message, conversationHistory }),
     });
     const data = await response.json();
 
-    if (!response.ok || typeof data.reply !== 'string' || data.reply.trim() === '') {
+    if (!response.ok) {
+      const error = new Error(typeof data.reply === 'string' && data.reply.trim() ? data.reply : 'Chat request failed.');
+      error.backendResponse = true;
+      throw error;
+    }
+    if (typeof data.reply !== 'string' || data.reply.trim() === '') {
       throw new Error('Chat request failed.');
     }
 
@@ -75,9 +81,9 @@ chatForm.addEventListener('submit', async (event) => {
     loadingMessage.remove();
     addMessage('assistant', data.reply);
     chatStatus.textContent = defaultStatus;
-  } catch {
+  } catch (error) {
     loadingMessage.remove();
-    addMessage('assistant', 'Sorry, I couldn’t get a reply just now. Please try again in a moment.', 'message-error');
+    addMessage('assistant', error?.backendResponse ? error.message : 'Sorry, I couldn’t get a reply just now. Please try again in a moment.', 'message-error');
     chatStatus.textContent = 'CafeBot could not reply just now.';
   } finally {
     requestInProgress = false;

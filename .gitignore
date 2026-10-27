@@ -11,6 +11,9 @@ __pycache__/
 .venv/
 venv/
 
+# Local order records may contain customer data
+/data/orders.json
+
 # macOS files
 .DS_Store
 .AppleDouble
